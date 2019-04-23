@@ -1,0 +1,39 @@
+.jumbotron {
+    background-image: url(/assets/newspapers.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    border-radius: unset;
+    padding-top: 175px;
+    margin-bottom: 0px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.281);
+    background-attachment: fixed;
+}
+
+.title, .subTitle {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.52);
+}
+
+.title {
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-top: 15px;
+}
+
+.subTitle {
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+
+.article {
+    background-color: rgba(51, 45, 46, 0.637);
+    margin: 10px;
+    padding: 5px;
+}
+

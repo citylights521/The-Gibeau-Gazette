@@ -1,0 +1,17 @@
+<div class="jumbotron">
+    <h1 class="title">The Gibeau Gazette</h1>
+    <p class="subTitle">Tracking all the latest Disney news.</p>
+</div>
+
+{{#each articles}}
+<div class="article">
+    <h3>
+        {{this.title}}
+    </h3>
+    <a href="{{this.link}}">{{this.link}}</a>
+    <p>{{this.summary}}</p>
+    <button>Notes</button>
+</div>
+
+{{/each}}
+
