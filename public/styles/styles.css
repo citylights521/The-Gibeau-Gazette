@@ -16,18 +16,21 @@ body {
 }
 
 .title, .subTitle {
+    font-family: 'Prata', serif;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.52);
+    margin-left: 330px;
+    margin-right: 330px;
+    background-color: rgba(255, 255, 255, 0.651);
 }
 
 .title {
-    font-size: 60px;
+    font-size: 65px;
     margin-bottom: 0%;
     padding-top: 15px;
 }
 
 .subTitle {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 15px;
 }
 
@@ -35,5 +38,8 @@ body {
     background-color: rgba(51, 45, 46, 0.637);
     margin: 10px;
     padding: 5px;
+    border-radius: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
