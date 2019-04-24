@@ -1,26 +1,33 @@
 .jumbotron {
-    background-image: url(/assets/newspapers.jpeg);
-    background-repeat: no-repeat;
+    background: url(/assets/disneyCastle.jpg) center center / cover no-repeat;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 25px;
+   
+   
+    /* background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
-    border-radius: unset;
-    padding-top: 175px;
-    margin-bottom: 0px;
+    /* height: 50vh; */ 
+    /* border-radius: unset; */
+    /* padding-top: 175px;
+    margin-bottom: 0px; */
+    /* width: 100%;
+    height: auto; */ */
 }
 
 body {
     height: 100%;
     width: 100%;
-    background-color: rgba(128, 128, 128, 0.281);
+    background-color: rgba(106, 208, 240, 0.281);
     background-attachment: fixed;
 }
 
 .title, .subTitle {
     font-family: 'Prata', serif;
     text-align: center;
-    margin-left: 330px;
-    margin-right: 330px;
-    background-color: rgba(255, 255, 255, 0.651);
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: rgba(255, 255, 255, 0.719);
 }
 
 .title {
@@ -35,11 +42,20 @@ body {
 }
 
 .article {
-    background-color: rgba(51, 45, 46, 0.637);
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgba(81, 32, 214, 0.472);
     margin: 10px;
-    padding: 5px;
+    padding: 15px;
     border-radius: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
+button {
+    border-radius: 8px;
+    background-color: rgba(168, 70, 168, 0.712);
+}
+
+button:hover {
+    background-color: rgba(156, 48, 156, 0.979);
+}
