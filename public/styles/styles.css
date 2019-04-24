@@ -3,22 +3,12 @@
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 25px;
-   
-   
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    /* height: 50vh; */ 
-    /* border-radius: unset; */
-    /* padding-top: 175px;
-    margin-bottom: 0px; */
-    /* width: 100%;
-    height: auto; */ */
 }
 
 body {
     height: 100%;
     width: 100%;
-    background-color: rgba(106, 208, 240, 0.281);
+    background-color: rgba(94, 207, 241, 0.26);
     background-attachment: fixed;
 }
 

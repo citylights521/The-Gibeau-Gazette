@@ -18,8 +18,14 @@ var ArticleSchema = new Schema({
       required: true
   },
 
-  // `link` is required and of type String
+  // `url` is required and of type String
   url: {
+    type: String,
+    required: true,
+    unique: true
+  },
+
+  img: {
     type: String,
     required: true
   },
