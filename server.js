@@ -12,8 +12,8 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-db.Article.collection.drop();
-db.Note.collection.drop();
+// db.Article.collection.drop();
+// db.Note.collection.drop();
 
 
 var PORT = process.env.PORT || 3000;
