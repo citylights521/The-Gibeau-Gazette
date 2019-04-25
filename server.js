@@ -12,8 +12,8 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-// db.Article.collection.drop();
-// db.Note.collection.drop();
+db.Article.collection.drop();
+db.Note.collection.drop();
 
 
 var PORT = process.env.PORT || 3000;
@@ -90,10 +90,9 @@ app.get("/scrape", function (req, res) {
       });
 
 
-      console.log(result);
-       // Send a message to the client
-      res.json("success");
+      console.log(result);      
     });
+    res.json("success");
   });
 });
 
