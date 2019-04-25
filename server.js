@@ -11,11 +11,11 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-db.Article.collection.drop();
-db.Note.collection.drop();
+// db.Article.collection.drop();
+// db.Note.collection.drop();
 
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -60,7 +60,7 @@ app.get("/scrape", function (req, res) {
       var h3Tag = $(this)
         .find("h3");
         
-      var imgSrc = $(this).find("img").attr('src');
+      var imgSrc = $(this).find("img").data("original").split(';')[0];
       result.img = imgSrc;
 
       var pTag = h3Tag.next("p");
@@ -90,10 +90,9 @@ app.get("/scrape", function (req, res) {
 
 
       console.log(result);
+       // Send a message to the client
+      res.json("success");
     });
-
-    // Send a message to the client
-    res.json();
   });
 });
 
@@ -117,7 +116,7 @@ app.get("/", function (req, res) {
 app.post("/createNote/:id", function(req, res) {
   db.Note.create(req.body)
     .then(function(dbNote) {
-      return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
+      return db.Article.findByIdAndUpdate(req.params.id, { $push: { note: dbNote} }, { new: true, safe: true, upsert: true });
     })
     .then(function(dbArticle) {
       res.json(dbArticle);
@@ -127,6 +126,11 @@ app.post("/createNote/:id", function(req, res) {
     });
 });
 
+app.post("/deleteNote/:id", function(req, res) {
+  db.Note.findById(req.params.id).remove(function (err) {
+    return res.json(err);
+  });    
+});
 
 // Route for grabbing a specific Article by id, populate it with it's note
 app.get("/notes/:id", function(req, res) {

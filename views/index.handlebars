@@ -1,14 +1,19 @@
 <div class="jumbotron">
     <h1 class="title">The Gibeau Gazette</h1>
-    <p class="subTitle">Tracking all the latest Disney news.</p>
+    <p class="subTitle">Tracking all the latest Disney news.</p>    
+</div>
+
+<div style="width:100%">
+  <button id="scraper" class="scrapeButton">Scrape</button> 
 </div>
 
 {{#each articles}}
 <div class="article">
-    <h3>
+  <img src="{{this.img}}">
+    <span>
         {{this.headline}}
-    </h3>
-    <img src="{{this.img}}">
+    </span>
+    </br>
     <a href="{{this.url}}" target="_blank">{{this.url}}</a>
     <p>{{this.summary}}</p>
     <button class="notes" data-toggle="modal" data-title="{{ this.headline }}" data-target="#notesModal" data-id="{{ this._id }}">Notes</button>
